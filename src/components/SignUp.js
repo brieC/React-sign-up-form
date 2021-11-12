@@ -38,7 +38,7 @@ const SignUp = ({ submitForm }) => {
             submitForm(true);
         }
     }, [errors]);
-    
+
     return (
         <div className="container">
             <div className="box">
@@ -155,6 +155,7 @@ const SignUp = ({ submitForm }) => {
                     </div>
                 </form>
             </div>
+
         </div>
     );
 };
