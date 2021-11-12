@@ -14,7 +14,7 @@ $ npm install
 Step 3:
 To run the React project.
 
-$ npm start
+$ npm start 
 
 Step 4:
 Enjoy the code 
