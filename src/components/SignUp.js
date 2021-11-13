@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Validate from './Validate';
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
-import InputGroup from 'react-bootstrap/InputGroup'
 import Button from 'react-bootstrap/Button'
 
 const SignUp = ({ submitForm }) => {
@@ -103,7 +102,7 @@ const SignUp = ({ submitForm }) => {
                         <br /><br />
 
                         {/* Radio buttons */}
-                        <InputGroup.Radio
+                        <input
                             className="radio"
                             type="radio"
                             checked={radio === "male"}
@@ -112,7 +111,7 @@ const SignUp = ({ submitForm }) => {
                         <label className="radiolabel">Male</label>
                         <br />
 
-                        <InputGroup.Radio
+                        <input
                             className="radio"
                             type="radio"
                             checked={radio === "female"}
@@ -121,7 +120,7 @@ const SignUp = ({ submitForm }) => {
                         <label className="radiolabel">Female</label>
                         <br />
 
-                        <InputGroup.Radio
+                        <input
                             className="radio"
                             type="radio"
                             checked={radio === "none"}
@@ -135,7 +134,7 @@ const SignUp = ({ submitForm }) => {
 
                     {/* Checkboxes */}
                     <div className="opt">
-                        <InputGroup.Checkbox
+                        <input
                             className="check"
                             id="first"
                             type="checkbox"
@@ -145,7 +144,7 @@ const SignUp = ({ submitForm }) => {
                         <label className="checklabel">Call anytime!</label>
                     </div>
                     <div className="opt2">
-                        <InputGroup.Checkbox
+                        <input
                             className="check"
                             id="second"
                             type="checkbox"
