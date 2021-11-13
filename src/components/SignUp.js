@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
 const SignUp = ({ submitForm }) => {
-    // Checked checkboxe buttons
+    // Checked checkbox buttons
     const [check, setIsChecked] = useState({});
 
     // Checked radio buttons
@@ -23,14 +23,14 @@ const SignUp = ({ submitForm }) => {
     const [errors, setErrors] = useState({});
     const [dataIsCorrect, setDataIsCorrect] = useState(false);
 
-    // When user inserts value
+    // Handle the change when a user inputs a value
     const handleChange = (event) => {
         setValues({
             ...values,
             [event.target.name]: event.target.value,
         })
     }
-    // Prevent page reloading when the sign up button is clicked
+    // Prevent the page from reloading when the sign up button is clicked
     const handleFormSubmit = (event) => {
         event.preventDefault();
         setErrors(Validate(values));
@@ -93,14 +93,13 @@ const SignUp = ({ submitForm }) => {
                             name="email"
                             value={values.email}
                             onChange={handleChange} />
-                        {/* When no email is detected, show required or invalid if not email format */}
+                        {/* When no email is detected, show required or invalid if it's not email format */}
                         {errors.email && <p className="error">{errors.email}</p>}
                     </div>
 
                     <div className="gender">
                         <label className="label" name="gender">Gender</label>
                         <br /><br />
-
                         {/* Radio buttons */}
                         <input
                             className="radio"
@@ -110,7 +109,6 @@ const SignUp = ({ submitForm }) => {
                             onChange={(e) => { setRadio(e.target.value) }} />
                         <label className="radiolabel">Male</label>
                         <br />
-
                         <input
                             className="radio"
                             type="radio"
@@ -119,7 +117,6 @@ const SignUp = ({ submitForm }) => {
                             onChange={(e) => { setRadio(e.target.value) }} />
                         <label className="radiolabel">Female</label>
                         <br />
-
                         <input
                             className="radio"
                             type="radio"

@@ -32,7 +32,7 @@ cd into the new folder and type:
 $ npm install
 
 Step 3:
-To run the React project.
+To run the React project:
 
 $ npm start 
 
