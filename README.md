@@ -1,6 +1,7 @@
 # hearX project
 Signup form challenge
 
+# HOW TO OPEN THE PROJECT
 Step 1:
 Open your terminal and then type:
 
@@ -18,5 +19,7 @@ $ npm start
 
 Step 4:
 Enjoy the code 
+
+
 
 
