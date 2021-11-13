@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Validate from './Validate';
 
+
+
 const SignUp = ({ submitForm }) => {
     // Checked checkboxe buttons
     const [check, setIsChecked] = useState({});
