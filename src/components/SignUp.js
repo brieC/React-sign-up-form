@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Validate from './Validate';
-
-
+import Container from 'react-bootstrap/Container'
+import Form from 'react-bootstrap/Form'
+import InputGroup from 'react-bootstrap/InputGroup'
+import Button from 'react-bootstrap/Button'
 
 const SignUp = ({ submitForm }) => {
     // Checked checkboxe buttons
@@ -42,11 +44,14 @@ const SignUp = ({ submitForm }) => {
     }, [errors]);
 
     return (
+        <Container>
         <div className="container">
             <div className="box">
                 <div>
                     <h1 className="title">Create Account</h1>
                 </div>
+                <Form>
+                <Form.Group>
                 <form className="form-box">
                     <div className="fname">
                         <label className="label" >First Name</label>
@@ -98,7 +103,7 @@ const SignUp = ({ submitForm }) => {
                         <br /><br />
 
                         {/* Radio buttons */}
-                        <input
+                        <InputGroup.Radio
                             className="radio"
                             type="radio"
                             checked={radio === "male"}
@@ -107,7 +112,7 @@ const SignUp = ({ submitForm }) => {
                         <label className="radiolabel">Male</label>
                         <br />
 
-                        <input
+                        <InputGroup.Radio
                             className="radio"
                             type="radio"
                             checked={radio === "female"}
@@ -116,7 +121,7 @@ const SignUp = ({ submitForm }) => {
                         <label className="radiolabel">Female</label>
                         <br />
 
-                        <input
+                        <InputGroup.Radio
                             className="radio"
                             type="radio"
                             checked={radio === "none"}
@@ -130,7 +135,7 @@ const SignUp = ({ submitForm }) => {
 
                     {/* Checkboxes */}
                     <div className="opt">
-                        <input
+                        <InputGroup.Checkbox
                             className="check"
                             id="first"
                             type="checkbox"
@@ -140,7 +145,7 @@ const SignUp = ({ submitForm }) => {
                         <label className="checklabel">Call anytime!</label>
                     </div>
                     <div className="opt2">
-                        <input
+                        <InputGroup.Checkbox
                             className="check"
                             id="second"
                             type="checkbox"
@@ -153,12 +158,15 @@ const SignUp = ({ submitForm }) => {
 
                     {/* Submit button */}
                     <div>
-                        <button className="submit" onClick={handleFormSubmit}>Sign Up!</button>
+                        <Button className="submit" onClick={handleFormSubmit}>Sign Up!</Button>
                     </div>
                 </form>
+                </Form.Group>
+                </Form>
             </div>
-
         </div>
+        </Container>
+        
     );
 };
 
